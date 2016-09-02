@@ -8,7 +8,7 @@ function SignInCtrl($http, $scope, $cordovaOauth, $ionicPopup) {
     vm.token = {};
 
     vm.googleLogin = function () {
-
+        $state.go('app.home');
         console.log("googleLogin init");
 
         // complete with YOUR parameter
