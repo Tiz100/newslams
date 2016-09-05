@@ -1,4 +1,12 @@
 {
-  "name": "oAuthTest",
-  "app_id": "7aea8931"
+  "name": "sportslam",
+  "app_id": "7aea8931",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }

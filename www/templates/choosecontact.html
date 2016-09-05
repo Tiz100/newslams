@@ -1,0 +1,7 @@
+﻿<ion-view title="chat-room contacts" ng-controller="ContactsController as vm">
+    <ion-content class="has-header padding">
+
+        <select class="browser-default" ng-options="item.displayName as item.displayName for item in vm.contacts track by item.id" ng-change="vm.select()" ng-model="vm.selected"></select>
+
+    </ion-content>
+</ion-view>

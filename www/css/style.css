@@ -1,1 +1,43 @@
 /* Empty. Add your own CSS if you like */
+
+.home-hello {
+  position: relative;
+}
+
+.home img {
+  display: table-cell;
+}
+
+.home-hello .item {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  border: 0;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.home-hello > img {
+  display: block;
+  height:80px;width:80px;
+}
+
+.card.col.home {
+  margin: 10px 10px;
+}
+
+.card.col.home h1 {
+  text-align: center;
+}
+
+.card.col.home h2 {
+  text-align: center;
+}
+.card-red {
+    background-color: red;
+}
+  .card .item:last-child{margin-top:20px;}
+

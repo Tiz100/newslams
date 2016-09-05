@@ -1,12 +1,21 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<h1> Slamming Walls
-    </h1>
-    <a href="#" onclick="window.open('http://dcmdevserv.info/Booyah_slam/', '_system', 'location=yes'); return false;" id="aboutBooyah-button5" style="border-radius:-6px -6px -6px -6px;"
-       class="button button-assertive button-block buttons">Go To Booyah Slams site</a>
-</body>
-</html>
+﻿<!--
+<ion-view title="Slamming Walls" view-title="Chat">
+      <div class="message-container">
+        <message-list></message-list>
+        <message-form></message-form>
+      </div>
+</ion-view>
+-->
+<ion-view ng-controller="TeamController as vm" view-title="Choose Your Team">
+    <ion-content>
+        <label class="item item-input item-select item-positive">
+            <div class="input-label">
+                Team
+            </div>
+
+            <select class="browser-default" ng-options="item.action as item.action for item in vm.team track by item.id"  ng-change="vm.select()" ng-model="vm.selected">
+                
+            </select>
+        </label>
+    </ion-content>
+</ion-view>

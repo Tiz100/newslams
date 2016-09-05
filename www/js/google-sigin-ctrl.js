@@ -8,7 +8,7 @@ function SignInCtrl($http, $scope, $cordovaOauth, $ionicPopup) {
     vm.token = {};
 
     vm.googleLogin = function () {
-        $state.go('app.home');
+     
         console.log("googleLogin init");
 
         // complete with YOUR parameter
@@ -18,9 +18,8 @@ function SignInCtrl($http, $scope, $cordovaOauth, $ionicPopup) {
         $cordovaOauth.google(googleClientId
           , ["https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"])
           .then(function (result) {
-
+              go
               vm.token = result.access_token;
-
               var resultSTR = JSON.stringify(result);
 
               /* // EG Response

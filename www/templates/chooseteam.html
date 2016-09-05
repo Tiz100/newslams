@@ -1,29 +1,84 @@
-﻿<ion-view view-title="Choose Your Team">
-    <ion-nav-buttons side="primary">
-        <button class="button button-icon icon ion-ios-minus-outline" ng-click="toggling()"></button>
-    </ion-nav-buttons>
+﻿<ion-view ng-controller="TeamController as vm" view-title="Choose Your Team">
     <ion-content>
-        <ion-refresher pulling-text="Pull to refresh..."
-                       on-refresh="doRefresh()">
-        </ion-refresher>
-        <div class="list">
-            <div class="item item-input-inset">
-                <label class="item-input-wrapper">
-                    <input type="text" placeholder="Today's List" ng-model='goal' class="fullWidth">
-                </label>
-                <button class="button button-balanced button-small" ng-click="adding(goal);goal='' ">
-                    Submit
-                </button>
+    
+        <label class="item item-input item-select item-positive">
+            <div class="input-label">
+                Sport
             </div>
+
+            <select  class="browser-default">
+                <option>
+                    <ion-item ng-repeat="sport.sportName">
+                         {{sport}}
+                    </ion-item>
+                </option>
+               
+            </select>
+        </label>
+
+        <label class="item item-input item-select item-assertive">
+            <div class="input-label">
+                Conference
+            </div>
+
+            <select  class="browser-default">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+
+        </label>
+
+        <label class="item item-input item-select item-positive">
+            <div class="input-label">
+                Team
+            </div>
+
+            <select class="browser-default" ng-options="item.action as item.action for item in vm.team track by item.id"  ng-change="vm.select()" ng-model="vm.selected">
+                
+            </select>
+        </label>
+
+
         </div>
-        <ion-list show-delete="shouldShowDelete">
-            <ion-item ng-repeat="item in items" item="item">
-                <label class="checkbox" style="display: inline-block; vertical-align: middle; height:42px">
-                    <input type="checkbox" ng-model="item.complete" ng-checked="item.complete" ng-click="checklistChange(item)">
-                </label>
-                {{ item.text }}
-                <ion-delete-button class="ion-trash-a" ng-click="deleteItem(item)"></ion-delete-button>
-            </ion-item>
-        </ion-list>
+
+        <!--add button to submit team choice to dadtabase-->
+        <div class="submit-team">
+            <button class="button button-large-font-size button-block button-assertive">
+                BOOYAH
+            </button>
+        </div>
+
+        <!--This will show the team name chosen and the logo and the helmet as avatar with an option to play fight song at the bottom-->
+        <div class="card">
+            <div class="item item-avatar">
+                <img src="my-image.png">
+                <h1>Team Name</h1>
+            </div>
+
+            <div class="item item-body">
+                <img class="full-image" src="http://www.booyahslams.com/images/Logov3small.png">
+
+            </div>
+
+            <!--Fight song play button-->
+
+            <!--<div class="Play-fightsong">
+                <button class="button button-block button-assertive button-large-font-size" >
+                    
+                    Play Fight Song
+                </button>-->
+            <audio id="myTune">
+                <source src="https://booyahfightsongs.blob.core.windows.net/asset-f59ee304-58cd-4e7d-bb22-8155836398e4/Fight Songs/Penn State - Fight Song.mp3">
+              
+            </audio>
+
+            <button class="button button-large-font-size button-block button-assertive" onclick="document.getElementById('myTune').play()">Play Fight Song</button>
+           
+            <button class="button button-large-font-size button-block button-stable"onclick="document.getElementById('myTune').pause(); document.getElementById('myTune').currentTime = 0;">Stop Music</button>
+
+            </div>
+
     </ion-content>
 </ion-view>
+

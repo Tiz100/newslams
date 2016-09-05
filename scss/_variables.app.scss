@@ -1,0 +1,46 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors: 
+
+$light:                           #E6E5FF !default;
+$stable:                          #CDCCFF !default;
+$positive:                        #0900ff !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #FF0000 !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default; */
+
+    
+    /*home card */
+.card .item:last-child{margin-top:20px; }
+                       
+ .button.button-positive {text-align:left;
+
+ }
+
+ .card {margin-top: 40px;
+        
+ }
+
+ /*side menu background*/
+ .my-container {
+    background-image:  url("http://www.booyahslams.com/images/Logov3small.png");
+    background-repeat: repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+}
+.transp .item-content {
+    background-color: transparent !important;
+    color: #fff;
+
+
+}
+
+
